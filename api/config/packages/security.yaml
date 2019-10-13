@@ -1,0 +1,20 @@
+security:
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+        
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: ~
+            logout: ~
+            stateless: true
+
+#            guard:
+#                authenticators:
+#                    - App\Security\Guard\WargamingAuthenticator
+                    
+
+    access_control:
+        # - { path: ^/admin, roles: ROLE_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }
