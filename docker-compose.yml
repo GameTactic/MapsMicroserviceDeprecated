@@ -40,8 +40,8 @@ services:
     image: mariadb:10.4
     environment:
       - MYSQL_ROOT_PASSWORD=gametactic
-      - MYSQL_DATABASE=gt_users
-      - MYSQL_USER=gt_users
+      - MYSQL_DATABASE=gt_maps
+      - MYSQL_USER=gt_maps
       - MYSQL_PASSWORD=please-change-me-asap
     volumes:
       - ./api/docker/db/data:/var/lib/mysql:rw
@@ -53,8 +53,8 @@ services:
   pma:
     image: phpmyadmin/phpmyadmin:latest
     environment:
-      - PMA_HOST=db
-      - PMA_USER=gt_users
+      - PMA_HOST=gametactic
+      - PMA_USER=root
       - PMA_PASSWORD=please-change-me-asap
     ports:
       - target: 80

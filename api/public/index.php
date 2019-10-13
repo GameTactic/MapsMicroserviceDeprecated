@@ -2,7 +2,7 @@
 
 /**
  *
- * GameTactic xxxx 2019 — NOTICE OF LICENSE
+ * GameTactic Maps 2019 — NOTICE OF LICENSE
  *
  * This source file is released under GPLv3 license by copyright holders.
  * Please see LICENSE file for more specific licensing terms.

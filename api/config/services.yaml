@@ -10,12 +10,6 @@ services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
-        bind:
-            $jwtTtl: 3600
-            $jwtAlgorithm: '%env(JWT_PASSPHRASE)%'
-            $jwtPrivateKey: '%env(resolve:JWT_SECRET_KEY)%'
-            $jwtPublicKey: '%env(resolve:JWT_PUBLIC_KEY)%'
-            $jwtIssuer: 'GameTactic'
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
