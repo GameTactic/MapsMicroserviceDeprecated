@@ -1,6 +1,7 @@
-# GameTactic Api Template
+# GameTactic Maps
 
-This is template which can be used to create new PHP microservices.
+This microservice will provide URLs to fetch current 
+maps for the selected game.
 
 ## Contributing
 

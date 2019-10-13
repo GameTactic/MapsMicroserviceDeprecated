@@ -1,6 +1,6 @@
 api_platform:
-    title: GameTactic xxxx
-    version: 1.0.0
+    title: GameTactic Maps
+    version: 0.1.0
     show_webby: false
     enable_nelmio_api_doc: true
     mapping:
