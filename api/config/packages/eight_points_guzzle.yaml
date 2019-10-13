@@ -1,0 +1,25 @@
+eight_points_guzzle:
+    clients:
+        .wot_xx_maps: &wotMaps
+            options:
+                timeout: 10
+                http_errors: true
+                headers:
+                    User-Agent: "GameTactic/v1"
+                    Accept: "application/json"
+            
+        wot_eu_maps:
+            <<: *wotMaps
+            base_url: "https://api.worldoftanks.eu/wot/encyclopedia/arenas/"
+
+        wot_na_maps:
+            <<: *wotMaps
+            base_url: "https://api.worldoftanks.com/wot/encyclopedia/arenas/"
+            
+        wot_ru_maps:
+            <<: *wotMaps
+            base_url: "https://api.worldoftanks.ru/wot/encyclopedia/arenas/"
+                
+        wot_asia_maps:
+            <<: *wotMaps
+            base_url: "https://api.worldoftanks.asia/wot/encyclopedia/arenas/"
