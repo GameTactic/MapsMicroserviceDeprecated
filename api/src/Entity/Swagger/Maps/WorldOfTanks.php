@@ -2,11 +2,11 @@
 
 /**
  *
- * GameTactic Maps 2019 — NOTICE OF LICENSE
+ * GameTactic Maps 2020 — NOTICE OF LICENSE
  *
  * This source file is released under GPLv3 license by copyright holders.
  * Please see LICENSE file for more specific licensing terms.
- * @copyright 2019-2019 (c) GameTactic
+ * @copyright 2019-2020 (c) GameTactic
  * @author Niko Granö <niko@granö.fi>
  *
  */
@@ -64,33 +64,21 @@ class WorldOfTanks
         $this->description = $description;
     }
 
-    /**
-     * @return string
-     */
     public function getArenaId(): string
     {
         return $this->arenaId;
     }
 
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @return string
-     */
     public function getCamouflage(): string
     {
         return $this->camouflage;
     }
 
-    /**
-     * @return string
-     */
     public function getDescription(): string
     {
         return $this->description;

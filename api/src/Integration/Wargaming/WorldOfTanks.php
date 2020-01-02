@@ -2,11 +2,11 @@
 
 /**
  *
- * GameTactic Maps 2019 — NOTICE OF LICENSE
+ * GameTactic Maps 2020 — NOTICE OF LICENSE
  *
  * This source file is released under GPLv3 license by copyright holders.
  * Please see LICENSE file for more specific licensing terms.
- * @copyright 2019-2019 (c) GameTactic
+ * @copyright 2019-2020 (c) GameTactic
  * @author Niko Granö <niko@granö.fi>
  *
  */
@@ -15,7 +15,6 @@ namespace App\Integration\Wargaming;
 
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
-use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 final class WorldOfTanks
@@ -42,9 +41,6 @@ final class WorldOfTanks
 
     /**
      * WorldOfTanks constructor.
-     *
-     * @param ContainerInterface $container
-     * @param string             $wgApplicationId
      */
     public function __construct(ContainerInterface $container, string $wgApplicationId)
     {
@@ -52,25 +48,16 @@ final class WorldOfTanks
         $this->wgApplicationId = $wgApplicationId;
     }
 
-    /**
-     * @param string $region
-     *
-     * @return ClientInterface
-     */
     private function getClient(string $region): ClientInterface
     {
         if (!\in_array($region, self::REGIONS, true)) {
-            throw new \InvalidArgumentException(
-                sprintf('Region must be one of %s.', implode(', ', self::REGIONS))
-            );
+            throw new \InvalidArgumentException(sprintf('Region must be one of %s.', implode(', ', self::REGIONS)));
         }
 
         return $this->container->get(sprintf('eight_points_guzzle.client.wot_%s_maps', $region));
     }
 
     /**
-     * @param string $region
-     *
      * @throws GuzzleException
      *
      * @return \App\Entity\Swagger\Maps\WorldOfTanks[]
